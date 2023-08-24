@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class  AppColor{
-  static const Color bgColor = Color(0xFFEEEFF5);
+  static const Color lightScaffold = Color(0xFFEEEFF5);
+  static const Color darkScaffold = Color(0xFF09031B);
+  static const Color darkPrimary = Color.fromARGB(255, 94, 75, 236);
+  static const Color lightPrimary = Color(0xFF00006b);
+  static const Color lightCardColor = Color.fromARGB(106, 250, 250, 250);
   static const Color white = Color(0xFFFFFFFF);
   static const Color purple = Color(0xFF693DA1);
   static const Color red = Color(0xFFDA4040);
