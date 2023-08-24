@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:smartshop/providers/theme_provider.dart';
 
 import 'Screens/home_page.dart';
+import 'constants/theme_data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,15 +21,19 @@ class MyApp extends StatelessWidget {
           return ThemeProvider();
         })
       ],
-      child:  MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'SmartShop',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
+      child: Consumer<ThemeProvider>(builder: (context, themeProvider, child){
+        return  MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'SmartShop',
+    theme: Styles.themeData(isDarkTheme: false, context: context),
 
-      home: const HomePage(),
-    ),);
+    home: const HomePage(),
+    ),),
+
+
+      
+      
+
 
 
 
