@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(onPressed: (){}, child: const Text("Hello there ")),
             SwitchListTile(
                 title: Text(themeProvider.getIsDarkTheme ? "Dark mode" : "Light mode"),
-                value: themeProvider.getIsDarkTheme, onChanged:(value){themeProvider.setDarkTheme(value);})
+                value: themeProvider.getIsDarkTheme, onChanged:(value){themeProvider.setDarkTheme(themeValue:value);})
 
           ],
         )

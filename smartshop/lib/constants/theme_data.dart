@@ -9,7 +9,8 @@ class Styles{
   ){
     return ThemeData(
       scaffoldBackgroundColor: isDarkTheme? AppColor.darkScaffold: AppColor.lightScaffold,
-      cardColor: isDarkTheme? const Color.fromARGB(255, 13, 6, 0) : AppColor.lightCardColor
+      cardColor: isDarkTheme? const Color.fromARGB(255, 13, 6, 0) : AppColor.lightCardColor,
+      brightness: isDarkTheme? Brightness.dark: Brightness.light
     );
   }
 }

@@ -25,19 +25,12 @@ class MyApp extends StatelessWidget {
         return  MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'SmartShop',
-    theme: Styles.themeData(isDarkTheme: false, context: context),
+    theme: Styles.themeData(isDarkTheme: themeProvider.getIsDarkTheme, context: context),
 
     home: const HomePage(),
-    ),),
-
-
-      
-      
-
-
-
-
-
+        );
+      },
+      ),
+    );
   }
 }
-
