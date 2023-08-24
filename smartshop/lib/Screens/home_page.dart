@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:smartshop/providers/theme_provider.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -11,6 +13,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
     return Scaffold(
       body: Center(
         child : Column(
@@ -18,7 +21,10 @@ class _HomePageState extends State<HomePage> {
           children: [
 
             const Text("Hello there"),
-            ElevatedButton(onPressed: (){}, child: const Text("Hello there "))
+            ElevatedButton(onPressed: (){}, child: const Text("Hello there ")),
+            SwitchListTile(
+                title: Text(themeProvider.getIsDarkTheme ? "Dark mode" : "Light mode"),
+                value: themeProvider.getIsDarkTheme, onChanged:(value){themeProvider.setDarkTheme(value);})
 
           ],
         )
